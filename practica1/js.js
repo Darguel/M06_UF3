@@ -1,7 +1,18 @@
 let fitxer = [];
 
-const dropArea = document.querySelector('.drop-area')
-const dragDropText = document.querySelector('h2')
-const button =  document.querySelector('button')
-const input =  document.querySelector('#input-file')
-const preview =  document.querySelector('#preview')
+let dropArea = document.querySelector('.drop-area')
+let dragDropText = document.querySelector('h2')
+let button =  document.querySelector('button')
+let input =  document.querySelector('#input-file')
+let preview =  document.querySelector('#preview')
+
+
+
+let eventos = ['dragover','dragleave','drop',];
+
+eventos.forEach(evento => {
+    dropArea.addEventListener(evento, prevDefault);
+});
+function prevDefault (e) {
+    e.preventDefault();
+}
