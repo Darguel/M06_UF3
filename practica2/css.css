@@ -1,0 +1,11 @@
+.error{
+    color: red;
+}
+
+.backgroundError{
+    background-color: rgb(219, 73, 73);
+}
+
+.backgroundCorrect{
+    background-color: rgb(56, 182, 56);
+}

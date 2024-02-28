@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari de Registre</title>
+    <link rel="stylesheet" href="css.css" />
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    <label for="name">Nom d'usuari:</label>
+    <input type="text" id="name" name="name" onfocusout="nombre()">
+    <div id="nameError" class="error"></div>
+
+    <br>
+
+    <label for="email">Correu electrònic:</label>
+    <input type="text" id="email" name="email" onfocusout="validateEmail()">
+    <div id="emailError" class="error"></div>
+
+    <br>
+
+    <label for="password">Contrasenya:</label>
+    <input type="password" id="password" name="password" oninput="contrasenya()">
+    <div id="passwordError" class="error"></div>
+
+    <br>
+
+    <label for="confirmPassword">Confirmar Contrasenya:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" oninput="validateConfirmPassword()">
+    <div id="confirmPasswordError" class="error"></div>
+
+    <br>
+
+    <label for="address">Adreça postal:</label>
+    <input type="text" id="address" name="address" onfocusout="validateAddress()">
+    <div id="addressError" class="error"></div>
+
+    <br>
+
+    <button type="submit" value="">Registrar</button>
+    <div id="errorEnviar" class="error"></div>
+</form>
+
+<script src="js.js"></script>
+</body>
+</html>
